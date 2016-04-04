@@ -33,7 +33,7 @@ if (float(sRate) < 1.0):
 else:
     precision = len(sRate)-1
 
-# set reference starting time and first interval check
+# set reference starting time
 start_time = time.time()
 
 # identify save file for all data recorded via start time ref.
