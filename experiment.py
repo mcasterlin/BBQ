@@ -27,7 +27,7 @@ sRate = input()
 sPeriod = (1.0 / float(sRate))
 print("\n")
 
-# calculate necessary precision to represent selected sampling resolution
+# calculating necessary precision to represent selected sampling resolution
 if (float(sRate) < 1.0):
     precision = 0
 else:
@@ -35,7 +35,6 @@ else:
 
 # set reference starting time and first interval check
 start_time = time.time()
-timeref = start_time
 
 # identify save file for all data recorded via start time ref.
 filename = "DataLogs/TemperatureProfile(" + str(datetime.datetime.fromtimestamp(start_time).strftime('%Y-%m-%d-%H:%M:%S')) + ").txt"
@@ -59,9 +58,6 @@ try:
 
             # generate associated data time stamp (relative to start)
             elapsed_time = time.time() - start_time
-
-            # update variable to track time of latest reading
-            timeref = time.time()
 
             # convert binary literal to float and int values
             temp = temp.decode()
