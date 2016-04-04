@@ -27,7 +27,7 @@ sRate = input()
 sPeriod = (1.0 / float(sRate))
 print("\n")
 
-# calculating necessary precision to represent selected sampling resolution
+# calculate necessary precision to represent selected sampling resolution
 if (float(sRate) < 1.0):
     precision = 0
 else:
